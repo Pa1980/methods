@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-
+// hw
         Author oneAuthor = new Author("Александр","Пушкин");
         Author twoAuthor = new Author("Михаил", "Булгаков");
         System.out.println(oneAuthor.getName()+" "+oneAuthor.getSurname());
