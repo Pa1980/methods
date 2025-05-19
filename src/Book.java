@@ -21,7 +21,6 @@ public class Book {
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
         return Objects.equals(title, book.title);// && Objects.equals(bookName, book.bookName);
-        // year == book.year
     }
 
     @Override
