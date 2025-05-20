@@ -1,13 +1,16 @@
 import java.util.Objects;
 
 public class Book {
-    String title;
+    private String title;
     Author bookName;
     private int year;
     public Book (String title, Author bookName, int year ) {
         this.title = title;
         this.bookName = bookName;
         this.year = year;
+    }
+    public String getTitle() {
+        return this.title;
     }
     public int getYear() {
         return this.year;
@@ -18,9 +21,9 @@ public class Book {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null) return false;
         Book book = (Book) o;
-        return Objects.equals(title, book.title);// && Objects.equals(bookName, book.bookName);
+        return (Objects.equals(title, book.title) || bookName.equals(book.bookName));
     }
 
     @Override
@@ -30,7 +33,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return '"'+title+'"'+' '+bookName.getName()+' '+bookName.getSurname()+' '+year;
+        return '"'+title+'"'+' '+bookName.toString()+' '+year;
 
     }
 }

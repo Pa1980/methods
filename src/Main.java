@@ -3,11 +3,11 @@ public class Main {
         Author oneAuthor = new Author("Александр","Пушкин");
         Author twoAuthor = new Author("Михаил", "Булгаков");
         Author threeAuthor = new Author("Jhon", "Keho");
-        System.out.println(oneAuthor.getName()+" "+oneAuthor.getSurname());
-        System.out.println(twoAuthor.getName()+" "+twoAuthor.getSurname());
+
         Book bookOne = new Book("Капитанская дочка", oneAuthor, 1936);
         Book bookTwo = new Book("Мастер и Маргарита", twoAuthor, 1940);
-        Book bookThree = new Book("Квантовый воин", threeAuthor, 2011);
+        Book bookThree = new Book("Квантовый воин", threeAuthor, 2011);//
+
         System.out.println();
         bookOne.setYear(1836);
         System.out.println("bookOne = " + bookOne);
